@@ -109,18 +109,23 @@ nav{
     box-shadow: -2px 2px 5px slategray; 
 }
 .pics{
-    width: 90%;
+    width: 80%;
     display: flex;
+    flex-wrap: wrap;
     justify-content:space-between;
     margin-top: 20px;
-    margin-bottom: 40px;
+    padding-bottom: 100px;
     margin-left: auto;
     margin-right: auto;
+    /* overflow:auto; */
 }
 .pics img{
-    border-radius: 20px;
+    border-radius: 40px;
+    width: 300px;
+    height: 300px;
+    padding: 20px;
 }
-.photo{
+/* .photo{
     width: 90%;
     display: flex;
     justify-content: space-between; 
@@ -130,7 +135,7 @@ nav{
 .photo img{
     border-radius: 28px; 
     margin-bottom: 60px;  
-}
+} */
 .section-3{
     background-color:  #157293;
 }
@@ -278,10 +283,10 @@ nav{
     .mobile-nav-toggle[aria-expanded = "true"] {
         background-image: url(/assets/close.svg);
     }
-    .pics, .photo{
+    .pics{
         display: block;
     }
-    .pics img, .photo img{
+    .pics img{
         width: 100%;
     }
     .info-1{
@@ -293,40 +298,15 @@ nav{
         width: 100%;
         align-content: center;
     }
-    .image{
-        width: 80%;
-        align-content: center;
-    }
     .asset, .assete{
         display: none;
     }
+    .my-header{
+        width: 60%;
+        margin-left: 40px;        
+    }
 }
-/* @media screen and (max-width: 414px){
-    .project{
-        display: block;
-        width: 100%;
-    }
-    .pics, .photo{
-        display: block;
-    }
-    .pics img, .photo img{
-        width: 100%;
-    }
-    ul{
-        width: 100%;
-        width: 80%;
-        display: grid;
-    }
-    .info{
-        display: block;
-        width: 50%;
-    }
-    .image{
-        width: 80%;
-        align-content: center;
-    }
-
-@media screen and (max-width: 768px){
+/* @media screen and (max-width: 768px){
     .project{
         display: block;
         width: 100%;
