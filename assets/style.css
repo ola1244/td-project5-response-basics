@@ -27,9 +27,25 @@ a{
     text-decoration: none;
     color: white;
 }
+.nav-link{
+    transition: 0.7s;
+}
 a:hover{
     text-decoration: underline white;
     color: rgb(5, 44, 44);
+}
+.hamburger{
+    display: block;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
 }
 .nav-banner{
     background-color:#4d9aad;
@@ -198,15 +214,46 @@ nav{
     width:15px;
 }
 
-.mobile-nav-toggle{
+/* .mobile-nav-toggle{
     display: none;
-}
+} */
 
 /* Using max-width media query to target 414px, 768px and 1024px */
 
 
 @media(min-width: 414px) {
+    .hamburger{
+        margin-top: 1.5rem;
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
     .primary-navigation{
+        position: fixed;
+        left: 100%;
+        top: 0;
+        gap: 0;
+        flex-direction: column;
+        background: hsl(0 0% 25% / 0.75);
+        backdrop-filter: blur(1.5rem);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .nav-item{
+        margin: 10px 0;
+    }
+    .primary-navigation.active{
+        left: 0;
+    }
+    /* .primary-navigation{
         position: fixed;
         inset: 0% 0% 0% 50%;
         --gap:2em;
@@ -238,7 +285,7 @@ nav{
     }
     .mobile-nav-toggle[aria-expanded = "true"] {
         background-image: url(/assets/close.svg);
-    }
+    } */
     .nav-banner{
         height: 5.5rem;
     }
@@ -354,9 +401,12 @@ nav{
     .primary-navigation{
         display:contents;
      }
-    .mobile-nav-toggle{
+     .hamburger{
+        display: none;
+     }
+    /* .mobile-nav-toggle{
         display:none;
-    }
+    } */
     .my-header{
         margin-left: 8rem;
     }
