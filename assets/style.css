@@ -208,7 +208,7 @@ nav{
 @media(min-width: 414px) {
     .primary-navigation{
         position: fixed;
-        inset: 0% 0% 0% 30%;
+        inset: 0% 0% 0% 50%;
         --gap:2em;
         flex-direction: column;
         align-items:inherit;
@@ -224,12 +224,12 @@ nav{
     }
     .mobile-nav-toggle{
         position: absolute;
-        background-image: url(/assets/hamb.svg);
+        background-image: url(/assets/menu.svg);
         background-color:transparent;
         background-repeat: no-repeat;
         border: 0;
         width: 4rem;
-        /* aspect-ratio: 1; */
+        aspect-ratio: 1;
         top: .5rem;
         bottom: 1rem;
         right: 2rem;
@@ -246,7 +246,8 @@ nav{
         display: block;
     }
     .pics img{
-        width: 100%;
+        width: 350px;
+        height: 350px;
     }
     .info-1{
         display: block;
@@ -302,7 +303,8 @@ nav{
         display: block;
     }
     .pics img{
-        width: 100%;
+        width: 700px;
+        height: 700px;
     }
     .info-1{
         display: block;
